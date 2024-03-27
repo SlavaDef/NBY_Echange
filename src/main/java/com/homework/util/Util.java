@@ -17,7 +17,6 @@ import java.util.List;
 public class Util {
 
 
-
     public static List<ExchangeCourse> makeJson() throws IOException {
         List<ExchangeCourse> exangeCourses = new ArrayList<>();
         String parse33 = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=20240101&json";
@@ -28,7 +27,7 @@ public class Util {
 
         Gson gson = new Gson();
         ObjectMapper objectMapper = new ObjectMapper();
-       // objectMapper.setDateFormat(new SimpleDateFormat("dd.MM.yyyy"));
+        objectMapper.setDateFormat(new SimpleDateFormat("dd.MM.yyyy"));
         try (BufferedReader reader = new BufferedReader
                 (new InputStreamReader(conn.getInputStream()))) {
             StringBuilder result = new StringBuilder();
@@ -38,7 +37,7 @@ public class Util {
 
 
             ExchangeCourse course = objectMapper.readValue(result.toString(), ExchangeCourse.class);
-          //  ExchangeCourse course = gson.fromJson(result.toString(), ExchangeCourse.class);
+            //  ExchangeCourse course = gson.fromJson(result.toString(), ExchangeCourse.class);
             exangeCourses.add(new ExchangeCourse(course.getTxt(), course.getRate(),
                     course.getCc(), course.getExchangedate()));
 
@@ -46,6 +45,29 @@ public class Util {
         return exangeCourses;
     }
 
+
+    public static ExchangeCourse addOneExs(CourseDao dao) throws IOException {
+        String parse33 = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=20240101&json";
+
+        URL url = new URL(parse33);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setDateFormat(new SimpleDateFormat("dd.MM.yyyy"));
+        try (BufferedReader reader = new BufferedReader
+                (new InputStreamReader(conn.getInputStream()))) {
+            StringBuilder result = new StringBuilder();
+            for (String line; (line = reader.readLine()) != null; ) {
+                result.append(line.replaceAll("]", "").replaceAll("\\[", ""));
+            }
+            ExchangeCourse course = objectMapper.readValue(result.toString(), ExchangeCourse.class);
+            ExchangeCourse exchangeCourse = new ExchangeCourse(course.getRate(),
+                    course.getCc(), course.getExchangedate());
+            dao.addCourse(exchangeCourse);
+            return exchangeCourse;
+        }
+
+    }
 
 
     public static List<ExchangeCourse> getByTwoMonth() throws IOException {
@@ -77,7 +99,7 @@ public class Util {
                     }
 
                     ExchangeCourse course = gson.fromJson(result.toString(), ExchangeCourse.class);
-                    exangeCourses.add(new ExchangeCourse( course.getRate(),
+                    exangeCourses.add(new ExchangeCourse(course.getRate(),
                             course.getCc(), course.getExchangedate()));
                 }
             }
@@ -89,7 +111,7 @@ public class Util {
     }
 
 
-    public static void getByTwoMonth2(CourseDao dao ) throws IOException {
+    public static void getByTwoMonth2(CourseDao dao) throws IOException {
         int x = 0;
         String c = "1";
         int leng = 32;
@@ -106,6 +128,7 @@ public class Util {
                 conn.setRequestMethod("GET");
                 // Gson gson = new Gson();
                 ObjectMapper objectMapper = new ObjectMapper();
+                objectMapper.setDateFormat(new SimpleDateFormat("dd.MM.yyyy"));
                 try (BufferedReader reader = new BufferedReader
                         (new InputStreamReader(conn.getInputStream()))) {
                     StringBuilder result = new StringBuilder();

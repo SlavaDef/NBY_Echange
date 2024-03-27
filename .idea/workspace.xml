@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bc8174c-09ee-4be1-b936-23045eb243d9" name="Changes" comment="cjmmit 2">
+    <list default="true" id="0bc8174c-09ee-4be1-b936-23045eb243d9" name="Changes" comment="cjmmit 3">
+      <change afterPath="$PROJECT_DIR$/src/test/java/CourseDaoImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/models/ExangeCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/models/ExchangeCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/models/ExchangeCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/models/ExchangeCourse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/T_Z" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/T_Z" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2eH8dqkwr6ZHXUJp8dM6WlmkRyk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,11 +42,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "JUnit.CourseDaoImpTest.IfReturnByDateOk.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/Quick start",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,7 +63,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.homework.App" />
       <module name="NBY_Course" />
@@ -74,9 +77,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CourseDaoImpTest.IfReturnByDateOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NBY_Course" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CourseDaoImpTest" />
+      <option name="METHOD_NAME" value="IfReturnByDateOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.CourseDaoImpTest.IfReturnByDateOk" />
       </list>
     </recent_temporary>
   </component>
@@ -95,7 +109,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711550234983</updated>
-      <workItem from="1711550236068" duration="7128000" />
+      <workItem from="1711550236068" duration="17282000" />
+      <workItem from="1711574300227" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="cjmmit 2">
       <option name="closed" value="true" />
@@ -105,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711551455491</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cjmmit 3">
+      <option name="closed" value="true" />
+      <created>1711562291136</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711562291137</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cjmmit 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="cjmmit 2" />
+    <MESSAGE value="cjmmit 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="cjmmit 3" />
   </component>
 </project>

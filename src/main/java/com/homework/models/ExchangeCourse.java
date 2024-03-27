@@ -11,6 +11,13 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.Date;
+@NamedQueries({
+        @NamedQuery(name = "ExchangeCourse_By_Date",
+                query = "from ExchangeCourse e where e.exchangedate = :exchangedate"),
+        @NamedQuery(name = "ExchangeCourse_By",
+        query = "from ExchangeCourse  where exchangedate < :exchangedate")
+} )
+
 
 
 @NoArgsConstructor
@@ -29,7 +36,7 @@ public class ExchangeCourse {
 
     private String cc;
     @Temporal(value = TemporalType.DATE)
-    @JsonFormat(pattern = "dd.MM.yyyy")
+    //  @JsonFormat(pattern = "dd.MM.yyyy")
     private Date exchangedate;
 
     public ExchangeCourse(String txt, double rate, String cc, Date exchangedate) {
@@ -48,7 +55,7 @@ public class ExchangeCourse {
     @Override
     public String toString() {
         return "ExchangeCourse{" +
-                ", rate=" + rate +
+                " rate=" + rate +
                 ", cc='" + cc + '\'' +
                 ", exchangedate=" + exchangedate +
                 '}';

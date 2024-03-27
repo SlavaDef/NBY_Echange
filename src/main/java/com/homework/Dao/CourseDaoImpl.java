@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.util.Date;
 import java.util.List;
 
 public class CourseDaoImpl implements CourseDao {
@@ -28,5 +29,45 @@ public class CourseDaoImpl implements CourseDao {
         }
     }
 
-}
+    @Override
+    public ExchangeCourse getCoursesByDate(Date date) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Transaction transaction = session.beginTransaction();
+
+            Query<ExchangeCourse> query =
+                    session.createNamedQuery("ExchangeCourse_By_Date", ExchangeCourse.class)
+                            .setParameter("exchangedate", date);
+            List<ExchangeCourse> resultLIst = query.list();
+            transaction.commit();
+            return resultLIst.get(0);
+        }
+        }
+
+    @Override
+    public List<ExchangeCourse> getCourseRates() {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            String hql = "select distinct from ExchangeCourse  where exchangedate < '2024-02-01'";
+            Query<ExchangeCourse> query = session.createQuery(hql , ExchangeCourse.class);
+            return query.list();
+        }
+    }
+
+    @Override
+    public List<ExchangeCourse> getCoursesBy(Date date) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Transaction transaction = session.beginTransaction();
+
+            Query<ExchangeCourse> query =
+                    session.createNamedQuery("ExchangeCourse_By", ExchangeCourse.class)
+                            .setParameter("exchangedate", date);
+            List<ExchangeCourse> resultLIst = query.list();
+            transaction.commit();
+            return resultLIst;
+        }
+    }
+    }
+
+
+
+
 

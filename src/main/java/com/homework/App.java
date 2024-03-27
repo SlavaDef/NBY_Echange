@@ -5,6 +5,7 @@ import com.homework.Dao.CourseDaoImpl;
 import com.homework.models.ExchangeCourse;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import static com.homework.util.Util.getByTwoMonth2;
@@ -17,12 +18,17 @@ public class App {
         CourseDao dao = new CourseDaoImpl();
         getByTwoMonth2(dao);
 
-        for (ExchangeCourse course2: dao.getAllCourses()) {
+      //  for (ExchangeCourse course2: dao.getAllCourses()) {
 
-            System.out.println(course2);
-        }
+     //       System.out.println(course2);
+     //  }
 
-     // List<ExchangeCourse> list =   makeJson();
-     // System.out.println(list.get(0));
+     //  System.out.println( dao.getCoursesByDate(new Date(124,1,22)));
+
+       List<ExchangeCourse> list = dao.getCoursesBy(new Date(124,1,22));
+       System.out.println(list);
+
+      // System.out.println(new Date(124,1,22));
+
     }
 }

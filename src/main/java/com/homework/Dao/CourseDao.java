@@ -1,12 +1,12 @@
 package com.homework.Dao;
 
-import com.homework.models.ExangeCourse;
+import com.homework.models.ExchangeCourse;
 
 import java.util.List;
 
 public interface CourseDao {
 
-    ExangeCourse addCourse(ExangeCourse course);
+    ExchangeCourse addCourse(ExchangeCourse course);
 
-    List<ExangeCourse> getAllCourses();
+    List<ExchangeCourse> getAllCourses();
 }

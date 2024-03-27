@@ -1,6 +1,6 @@
 package com.homework.Dao;
 
-import com.homework.models.ExangeCourse;
+import com.homework.models.ExchangeCourse;
 import com.homework.storage.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -11,7 +11,7 @@ import java.util.List;
 public class CourseDaoImpl implements CourseDao {
 
     @Override
-    public ExangeCourse addCourse(ExangeCourse course) {
+    public ExchangeCourse addCourse(ExchangeCourse course) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(course);
@@ -21,9 +21,9 @@ public class CourseDaoImpl implements CourseDao {
     }
 
     @Override
-    public List<ExangeCourse> getAllCourses() {
+    public List<ExchangeCourse> getAllCourses() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Query<ExangeCourse> query = session.createQuery("from ExangeCourse", ExangeCourse.class);
+            Query<ExchangeCourse> query = session.createQuery("from ExchangeCourse", ExchangeCourse.class);
             return query.list();
         }
     }

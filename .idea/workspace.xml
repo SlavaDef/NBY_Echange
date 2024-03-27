@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bc8174c-09ee-4be1-b936-23045eb243d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/models/ExangeCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/storage/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/homework/util/Util.java" afterDir="false" />
+    <list default="true" id="0bc8174c-09ee-4be1-b936-23045eb243d9" name="Changes" comment="cjmmit 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/Dao/CourseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/models/ExangeCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/models/ExchangeCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,11 +95,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711550234983</updated>
-      <workItem from="1711550236068" duration="971000" />
+      <workItem from="1711550236068" duration="7128000" />
     </task>
+    <task id="LOCAL-00001" summary="cjmmit 2">
+      <option name="closed" value="true" />
+      <created>1711551455491</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711551455491</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cjmmit 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="cjmmit 2" />
   </component>
 </project>

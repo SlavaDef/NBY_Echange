@@ -7,15 +7,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-//import java.sql.Date;
-
-import java.time.LocalDate;
 import java.util.Date;
 @NamedQueries({
         @NamedQuery(name = "ExchangeCourse_By_Date",
                 query = "from ExchangeCourse e where e.exchangedate = :exchangedate"),
         @NamedQuery(name = "ExchangeCourse_By_MAX",
-        query = "SELECT max (c.rate) FROM ExchangeCourse c WHERE c.exchangedate >= :from AND c.exchangedate <= :to")
+        query = "SELECT max (c.rate) FROM ExchangeCourse c WHERE c.exchangedate >= :from AND c.exchangedate <= :to"),
+        @NamedQuery(name = "ExchangeCourse_By_MIN",
+                query = "SELECT min (c.rate) FROM ExchangeCourse c WHERE c.exchangedate >= :from AND c.exchangedate <= :to"),
+        @NamedQuery(name = "ExchangeCourse_By_AVG",
+                query = "SELECT avg (c.rate) FROM ExchangeCourse c WHERE c.exchangedate >= :from AND c.exchangedate <= :to")
 } )
 
 

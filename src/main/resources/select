@@ -1,0 +1,6 @@
+from ExchangeCourse  order by rate - сортування за курсом від меншого до більшого
+from ExchangeCourse  order by rate desc - від більшого до меншого
+ select max (rate) from ExchangeCourse  - return max rate
+ select avg (rate) from ExchangeCourse - среднее значение из всех по полю rate
+
+ SELECT c FROM ExchangeCourse c WHERE c.exchangedate >= :from AND c.exchangedate <= :to - курс за період від -> до

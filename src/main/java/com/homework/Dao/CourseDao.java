@@ -13,7 +13,10 @@ public interface CourseDao {
 
     ExchangeCourse getCoursesByDate(Date date);
 
-    List<ExchangeCourse> getCourseRates();
+    List<ExchangeCourse> getCourseRates(Date from, Date to);
 
     List<ExchangeCourse> getCoursesBy(Date date);
+
+    public Double getMaxCourseRates(Date from, Date to);
+
 }

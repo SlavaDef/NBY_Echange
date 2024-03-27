@@ -23,12 +23,13 @@ public class App {
      //       System.out.println(course2);
      //  }
 
-     //  System.out.println( dao.getCoursesByDate(new Date(124,1,22)));
+      // System.out.println( dao.getCoursesByDate(new Date(124,1,22)));
 
-       List<ExchangeCourse> list = dao.getCoursesBy(new Date(124,1,22));
-       System.out.println(list);
+      // List<Double> list = dao.getMaxCourseRates((new Date(124,1,22),new Date(124,1,30));
 
-      // System.out.println(new Date(124,1,22));
+        System.out.println(dao.getMaxCourseRates(new Date(124,1,22),new Date(124,1,30)));
+
+     //  System.out.println(new Date(124,1,22));
 
     }
 }

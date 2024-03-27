@@ -14,8 +14,8 @@ import java.util.Date;
 @NamedQueries({
         @NamedQuery(name = "ExchangeCourse_By_Date",
                 query = "from ExchangeCourse e where e.exchangedate = :exchangedate"),
-        @NamedQuery(name = "ExchangeCourse_By",
-        query = "from ExchangeCourse  where exchangedate < :exchangedate")
+        @NamedQuery(name = "ExchangeCourse_By_MAX",
+        query = "SELECT max (c.rate) FROM ExchangeCourse c WHERE c.exchangedate >= :from AND c.exchangedate <= :to")
 } )
 
 
